@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arty Dezign</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --green:#4f5a4f;
+  --gold:#c7a86b;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Open Sans', sans-serif;
+  color:#111;
+}
+
+/* CONTAINER */
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+  padding:0 15px;
+}
+
+/* HEADER */
+header{
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  background:#fff;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+
+.logo img{
+  height:60px;
+}
+
+.nav a{
+  margin-left:15px;
+  text-decoration:none;
+  color:#555;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:60px 15px;
+  background:#f6f6f6;
+}
+
+.hero h1{
+  font-size:2rem;
+}
+
+.hero p{
+  margin:15px 0;
+}
+
+.btn{
+  background:var(--green);
+  color:#fff;
+  padding:12px 25px;
+  border-radius:30px;
+}
+
+/* SECTION */
+section{
+  padding:60px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:25px;
+  color:var(--green);
+}
+
+/* TABS */
+.tabs{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+}
+
+.tab{
+  padding:8px 15px;
+  border:1px solid #ddd;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+.tab.active{
+  background:var(--green);
+  color:#fff;
+}
+
+/* GALLERY */
+.gallery{
+  display:none;
+}
+
+.gallery.active{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+/* 🔥 SAME SIZE IMAGES FIX */
+.gallery img,
+.work-img{
+  width:100%;
+  height:355px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+/* FORM */
+form{
+  display:grid;
+  gap:10px;
+  max-width:400px;
+  margin:auto;
+}
+
+input,textarea{
+  padding:10px;
+  border:1px solid #ddd;
+}
+
+button{
+  padding:10px;
+  background:var(--green);
+  color:#fff;
+  border:none;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:10px;
+  border-radius:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .nav{
+    flex-direction:column;
+  }
+
+  .nav a{
+    margin:5px 0;
+  }
+
+  .hero h1{
+    font-size:20px;
+  }
+
+  .gallery img,
+  .work-img{
+    height:200px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+<div class="logo">
+<img src="Arty Dezign.png">
+</div>
+
+<div>
+<a href="#categories">Categories</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<h1>Creative Design That Sells Your Brand</h1>
+<p>Professional signage, printing & branding</p>
+<a class="btn">Get Quote</a>
+</section>
+
+<section id="categories">
+<div class="container">
+
+<h2 class="section-title">Our Categories</h2>
+
+<div class="tabs">
+<div class="tab active" onclick="showTab('logos')">Logos</div>
+<div class="tab" onclick="showTab('cards')">Business Cards</div>
+<div class="tab" onclick="showTab('flyers')">Flyers</div>
+<div class="tab" onclick="showTab('printing')">Printing</div>
+<div class="tab" onclick="showTab('vehiclewrap')">Vehicle Wrap</div>
+</div>
+
+<div id="logos" class="gallery active">
+<img src="logo.jpg">
+<img src="logo 2.jpg">
+</div>
+
+<div id="cards" class="gallery">
+<img src="business card.jpg">
+<img src="business card 2.jpg">
+</div>
+
+<div id="flyers" class="gallery">
+<img src="flyer 2.jpeg">
+<img src="flyer 3.jpg">
+</div>
+
+<div id="printing" class="gallery">
+<img src="printing.jpeg">
+<img src="printing 2.jpeg">
+</div>
+
+<div id="vehiclewrap" class="gallery">
+<img src="car wrap.jpg">
+<img src="vehicle wrap.PNG">
+</div>
+
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+<h2 class="section-title">Our Work</h2>
+
+<div class="grid">
+<img src="work 2.jpg" class="work-img">
+<img src="work 3.jpg" class="work-img">
+<img src="work 4.jpg" class="work-img">
+<img src="work 5.jpg" class="work-img">
+<img src="work 6.jpg" class="work-img">
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact</h2>
+
+<p>078 377 8919</p>
+<p>admin@artydezign.co.za</p>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Message"></textarea>
+<button>Send</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>© Arty Dezign</p>
+<footer>
+
+  <p>
+    📍 
+    <a href="https://www.google.com/maps?q=637+vercecunda+street,+Pretoria,+South+Africa,+0188" target="_blank">
+      637 Vercecunda Street, Pretoria, South Africa, 0188
+    </a>
+  </p>
+</footer>
+
+
+<a class="whatsapp" href="https://wa.me/27783778919">Chat</a>
+
+
+<script>
+function showTab(id){
+  document.querySelectorAll('.gallery').forEach(g=>g.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
